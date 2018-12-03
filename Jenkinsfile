@@ -16,9 +16,7 @@ pipeline {
             steps {
                 script {
                  app = docker.build('hi2suresh/train-schedule')
-                    app.inside {
-                     sh 'echo $(curl localhost:8080)'   
-                    }
+                   
                 }
             }
         }
